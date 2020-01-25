@@ -1,2 +1,2 @@
 # ChatApplication
-Simple chat application with django
+Simple chat application using django
