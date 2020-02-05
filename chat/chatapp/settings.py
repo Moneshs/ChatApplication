@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4tz_w)booce3w)fm!k!%sp9c3$a#)cr6s+4*e^#^8^ko8@1p&9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG =False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,7 +80,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
+            "hosts": [('_', 6379)],
         },
     },
 }
@@ -90,10 +90,11 @@ CHANNEL_LAYERS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'chatapp',
+        'NAME':'postgres',
         'USER':'postgres',
         'PASSWORD':'test1234',
-        'HOST':'localhost'
+        'HOST':'chatapp.cpcfnwbhuoo9.ap-south-1.rds.amazonaws.com',
+        'PORT':'5432'
     }
 }
 

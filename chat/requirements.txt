@@ -45,10 +45,10 @@ mccabe==0.6.1
 msgpack==0.6.2
 paramiko==2.7.1
 passlib==1.7.1
-pgadmin4==4.15
+#pgadmin4==4.15
 psutil==5.5.1
 psycopg2==2.8.4
-psycopg2-binary==2.8.4
+#psycopg2-binary==2.8.4
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycparser==2.19
