@@ -1,3 +1,3 @@
 #! /bin/bash
 
-rm -rf /home/ubuntu/ChatApplication/chat/*
+rm -rf /home/ubuntu/ChatApplication/*
