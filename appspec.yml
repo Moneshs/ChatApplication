@@ -4,6 +4,7 @@ files:
   - source: /
     destination: /home/ubuntu/ChatApplication/
 permissions:
+  - object: /home/ubuntu/ChatApplication
     owner: ubuntu
     group: ubuntu
 hooks:
