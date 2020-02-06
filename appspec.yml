@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/ChatApplication/
+    destination: /home/ubuntu/ChatApplication/chat/
 permissions:
-  - object: /home/ubuntu/ChatApplication/
+  - object: /home/ubuntu/ChatApplication/chat/
     owner: ubuntu
     group: ubuntu
 hooks:
