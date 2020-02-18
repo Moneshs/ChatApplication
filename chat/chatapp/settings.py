@@ -93,7 +93,7 @@ DATABASES = {
         'NAME':'postgres',
         'USER':'postgres',
         'PASSWORD':'test1234',
-        'HOST':'20200218042608174300000002.cpcfnwbhuoo9.ap-south-1.rds.amazonaws.com',
+        'HOST':'terraform-20200218045937836800000002.cpcfnwbhuoo9.ap-south-1.rds.amazonaws.com',
         'PORT':'5432'
     }
 }
