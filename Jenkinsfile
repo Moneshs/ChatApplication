@@ -12,6 +12,7 @@ pipeline {
             agent any
             steps {
              sh ''' #! /bin/bash
+             mkdir newfolder2
              rm -rf /var/lib/jenkins/workspace/chatapp1/.git
              cd /var/lib/jenkins/
              ssh ubuntu@13.234.115.189 sudo rm -rf /home/ubuntu/ChatApplication/chatapp
