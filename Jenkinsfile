@@ -3,7 +3,9 @@ Pipeline{
      stages {
        stage('Deploy'){
           steps {
-             git clone "https://github.com/Moneshs/ChatApplication.git"
+             sh ''' #! /bin/bash
+             mkdir newfolder
+             '''
            }
         }
      }  
