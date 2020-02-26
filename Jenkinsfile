@@ -7,11 +7,11 @@ pipeline{
                sh "ssh -vvv -o StrictHostKeyChecking=no -T ubuntu@13.234.115.189"
             }    
         }     
-       stage('Deploy'){
-          steps {
-             sh ''' #! /bin/bash
-             mkdir newfolder1
-             '''
+        stage('Deploy'){
+            steps {
+               sh ''' #! /bin/bash
+               mkdir newfolder1
+               '''
            }
         }
      }  
