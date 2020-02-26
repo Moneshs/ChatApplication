@@ -1,8 +1,8 @@
 pipeline {
-    agent none
+    agent any
     stages {
         stage('Test') {
-            agent any
+            
             steps {
              sh ''' #! /bin/bash
              mkdir newfolder2
@@ -12,7 +12,7 @@ pipeline {
              }
            }
           stage('ssh') {
-            agent ssh
+            
             steps {
              sh ''' #! /bin/bash   
              sshagent (credentials: ['c662f457-a520-4b6e-a099-e361298809f2'])
