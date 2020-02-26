@@ -1,6 +1,12 @@
 pipeline{
      agent any
      stages {
+        stage ('Test ssh'){
+            steps{
+               sshagent (credentials: ['ubuntu'])
+               sh "ssh -vvv -o StrictHostKeyChecking=no -T ubuntu@13.234.115.189"
+            }    
+        }     
        stage('Deploy'){
           steps {
              sh ''' #! /bin/bash
