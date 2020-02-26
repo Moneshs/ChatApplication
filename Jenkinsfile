@@ -1,15 +1,15 @@
 pipeline {
-    agent none 
+    agent any
     stages {
         stage('ssh') {
-            agent any
+            
             steps {
              sshagent (credentials: ['c662f457-a520-4b6e-a099-e361298809f2'])
              sh "ssh -vvv -o StrictHostKeyChecking=no -T ubuntu@13.234.115.189"
             }
         }
         stage('Test') {
-            agent any
+            
             steps {
              sh ''' #! /bin/bash
              mkdir newfolder2
