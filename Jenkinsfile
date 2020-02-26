@@ -1,7 +1,8 @@
 pipeline {
-    agent any
+    agent none
     stages {
         stage('Test') {
+            agent any
             steps {
              sh ''' #! /bin/bash
              mkdir newfolder2
