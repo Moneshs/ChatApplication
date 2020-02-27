@@ -8,9 +8,9 @@ pipeline {
              sh ''' #! /bin/bash 
              rm -rf /var/lib/jenkins/workspace/chatapp/.git
              cd /var/lib/jenkins/ 
-             ssh ubuntu@13.234.115.189 sudo rm -rf /home/ubuntu/ChatApplication/chatapp
-             scp -r /var/lib/jenkins/workspace/chatapp/ ubuntu@13.234.115.189:~/ChatApplication/
-             ssh ubuntu@13.234.115.189 sudo service gunicorn restart sudo service nginx restart
+             ssh ubuntu@13.234.118.185 sudo rm -rf /home/ubuntu/ChatApplication/chatapp
+             scp -r /var/lib/jenkins/workspace/chatapp/ ubuntu@13.234.118.185:~/ChatApplication/
+             ssh ubuntu@13.234.118.185 sudo service gunicorn restart sudo service nginx restart
              '''
             }
         }
