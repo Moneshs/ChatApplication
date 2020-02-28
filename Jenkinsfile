@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage('build'){
-            if [ ${BUILD_NUMBER} == "7" ];then
+            if ( ${BUILD_NUMBER} == "7" );then
             BUILD_NUMBER=${BUILD_NUMBER}-4;
         }
         stage('Test') {
