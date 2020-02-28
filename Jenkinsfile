@@ -1,17 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('build'){
-            steps {
-            sh ''' #! /bin/bash
-            if ( ${BUILD_NUMBER} == "12" );
-            then
-            BUILD_NUMBER=${BUILD_NUMBER}-8;
-            fi       
-            input message: "Does Pre-Production look good?"  
-            '''
-            }  
-        }
+       
         stage('Test') {
            steps {
              sh ''' #! /bin/bash 
