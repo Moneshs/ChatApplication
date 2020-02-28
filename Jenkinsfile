@@ -4,7 +4,7 @@ pipeline {
         stage('build'){
             steps {
             sh ''' #! /bin/bash
-            if ( ${BUILD_NUMBER} == "7" );
+            if ( ${BUILD_NUMBER} > "7" );
             then
             BUILD_NUMBER=${BUILD_NUMBER}-4;
             fi
