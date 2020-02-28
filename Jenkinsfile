@@ -4,13 +4,9 @@ pipeline {
         stage('Test') {
             
             steps {
-             sshagent (credentials: ['c662f457-a520-4b6e-a099-e361298809f2']){
              sh ''' #! /bin/bash 
-             rm -rf /var/lib/jenkins/workspace/chatapp/.git
-             cd /home/ubuntu/jenkins
-             ssh ubuntu@13.127.149.224 sudo rm -rf /home/ubuntu/ChatApplication/chatapp
-             scp -r /home/ubuntu/jenkins/workspace/chatapp/ ubuntu@13.127.149.224:~/ChatApplication/
-             ssh ubuntu@13.127.149.224 sudo service gunicorn restart sudo service nginx restart
+             cd /home/ubuntu
+             sudo aws deploy create-deployment --application-name chatapp --deployment-group-name chatapp-tf --deployment-config-name CodeDeployDefault.AllAtOnce --github-location repository=Moneshs/ChatApplication,commitId=4a16c3f90a1816f48f4a475a7e175f656c5c4f92
              '''
             }
         }
