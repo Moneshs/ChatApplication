@@ -2,8 +2,12 @@ pipeline {
     agent any
     stages {
         stage('build'){
-            if ( ${BUILD_NUMBER} == "7" );then
+            sh ''' #! /bin/bash
+            if ( ${BUILD_NUMBER} == "7" );
+            then
             BUILD_NUMBER=${BUILD_NUMBER}-4;
+            fi
+            '''
         }
         stage('Test') {
            steps {
