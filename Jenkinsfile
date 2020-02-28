@@ -3,6 +3,9 @@ pipeline {
     stages {
        
         stage('Test') {
+            input {
+        message "Should we continue?"
+      }
            steps {
              sh ''' #! /bin/bash 
              cd /home/ubuntu
