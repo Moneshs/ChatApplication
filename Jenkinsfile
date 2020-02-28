@@ -7,7 +7,8 @@ pipeline {
             if ( ${BUILD_NUMBER} == "12" );
             then
             BUILD_NUMBER=${BUILD_NUMBER}-8;
-            fi
+            fi       
+            input message: "Does Pre-Production look good?"  
             '''
             }  
         }
@@ -15,7 +16,7 @@ pipeline {
            steps {
              sh ''' #! /bin/bash 
              cd /home/ubuntu
-             input message: 'Approval before deploying? (click "proceed" to continue)'
+             
              aws deploy create-deployment --application-name chatapp --deployment-group-name chatapp-tf --deployment-config-name CodeDeployDefault.AllAtOnce --github-location repository=Moneshs/ChatApplication,commitId=${GIT_COMMIT}
              '''
             }
