@@ -2,6 +2,9 @@ pipeline {
     agent any
     stages {
        stage('Approval'){
+           options {
+             timeout(time: 30, unit: 'SECONDS') 
+            }
            input {
              message "Should we continue?"
             }   
@@ -18,7 +21,8 @@ pipeline {
              '''
             }
         }
-         stage('status'){
+        
+        stage('status'){
             steps {
             sh ''' #! /bin/bash
             echo Deployment started
@@ -26,4 +30,4 @@ pipeline {
             }  
         }
     }
-    }
+}
