@@ -1,12 +1,10 @@
 pipeline {
     agent any
-    stages {
-      
-        stage('discard'){
-        options {
+      options {
             buildDiscarder(logRotator(numToKeepStr: '7'))
-        }
-        }
+             }
+
+    stages {
        stage('Approval'){
            options {
              timeout(time: 30, unit: 'SECONDS') 
