@@ -18,7 +18,14 @@ pipeline {
         }
        }
     }
-
+        
+     stage('sonarqube'){
+        steps {
+          sh ''' #! /bin/bash
+          echo Sonarqube completed
+          '''
+          }  
+      }
 
        stage('Approval'){
            options {
