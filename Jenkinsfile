@@ -29,7 +29,7 @@ pipeline {
 
        stage('Approval'){
            options {
-             timeout(time: 30, unit: 'SECONDS') 
+             timeout(time: 60, unit: 'SECONDS') 
             }
            input {
              message "Should we continue?"
