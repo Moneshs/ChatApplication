@@ -3,7 +3,9 @@ pipeline {
       options {
             buildDiscarder(logRotator(numToKeepStr: '7'))
              }
-    stage('Sonarqube') {
+    
+    stages {
+      stage('Sonarqube') {
     environment {
         scannerHome = tool 'SonarQubeScanner'
     }
@@ -17,7 +19,7 @@ pipeline {
        }
     }
 
-    stages {
+
        stage('Approval'){
            options {
              timeout(time: 30, unit: 'SECONDS') 
