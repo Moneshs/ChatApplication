@@ -36,7 +36,7 @@ pipeline {
         
     }
     post { 
-        aborted { 
+        always { 
             echo 'Stage is success'
         }
     }
