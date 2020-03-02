@@ -5,7 +5,7 @@ pipeline {
              }
     
     
-        
+     stages {   
      stage('sonarqube'){
         steps {
           sh ''' #! /bin/bash
