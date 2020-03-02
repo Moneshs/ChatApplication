@@ -9,7 +9,7 @@ pipeline {
      stage('sonarqube'){
         steps {
           sh ''' #! /bin/bash
-          echo Sonarqube completed
+          echo Sonarqube complete
           '''
           }  
       }
